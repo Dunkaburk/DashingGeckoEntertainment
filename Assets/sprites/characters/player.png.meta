@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1155,7 +1155,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player_2
+      name: player_die_2
       rect:
         serializedVersion: 2
         x: 113
@@ -1198,10 +1198,10 @@ TextureImporter:
       player_idle_1: 1799231554
       player_idle_side_2: -984298265
       player_idle_up_4: -450971185
+      player_die_2: 1257070800
       player_walk_up_3: 1564693686
       player_die_1: -923875796
       player_walk_up_4: 1506228995
-      player_2: 1257070800
       player_idle_4: -978822330
       player_walk_side_0: 328976608
       player_walk_side_4: -1973934665
@@ -1213,13 +1213,13 @@ TextureImporter:
       player_attack_up_0: -744871713
       player_walk_side_3: 348284707
       player_idle_up_1: 1377677906
-      player_walk_side_1: -1895209635
       player_attack_down_0: -2788634
+      player_attack_side_0: -346311865
+      player_walk_side_1: -1895209635
       player_walk_up_0: -826174436
       player_idle_2: -2101001305
-      player_walk_up_1: -1598881408
       player_attack_side_1: -1578814756
-      player_attack_side_0: -346311865
+      player_walk_up_1: -1598881408
       player_attack_down_1: 729231302
       player_idle_side_3: 538879819
       player_walking_down_5: -701649445
