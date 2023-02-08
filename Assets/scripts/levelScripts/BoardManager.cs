@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class BoardManager : MonoBehaviour
 {
-    [Seralizable]
+    //[Seralizable]
     public class Count
     {
         public int minimum;
