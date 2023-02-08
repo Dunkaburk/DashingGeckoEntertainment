@@ -5,7 +5,6 @@ using UnityEngine;
 public class SlimeScript : MonoBehaviour
 {
     public CircleCollider2D slimeCircleCollider;
-    public Rigidbody2D slimeBody;
     // Start is called before the first frame update
     void Start()
     {
