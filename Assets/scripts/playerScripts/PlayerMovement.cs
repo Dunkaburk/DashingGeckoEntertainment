@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public Vector2 direction;
     private Animator animator;
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        //transform.Translate(direction * speed * Time.deltaTime); Old code.
+        rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
 
         if (direction.x != 0 || direction.y != 0)
         {
