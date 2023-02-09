@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private float lastPressed = 0f;
     private float currentPressed = 0f;
 
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        //transform.Translate(direction * speed * Time.deltaTime); Old code.
+        rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
 
         if (direction != Vector2.zero)
         {
