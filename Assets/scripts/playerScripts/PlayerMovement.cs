@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public Vector2 direction;
     private Animator animator;
+
+    private float lastPressed = 0f;
+    private float currentPressed = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ReadInput();
         Move();
+        CheckSprint();
     }
 
     private void ReadInput()
@@ -28,41 +36,36 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Player Going Up");
             direction += Vector2.up;
-
         }
         if (Input.GetKey(KeyCode.S))
         {
             Debug.Log("Player Going Down");
             direction += Vector2.down;
-
         }
         if (Input.GetKey(KeyCode.A))
         {
             Debug.Log("Player Going Left");
             direction += Vector2.left;
-
         }
         if (Input.GetKey(KeyCode.D))
         {
             Debug.Log("Player Going Right");
             direction += Vector2.right;
-
         }
-
     }
-
 
     private void Move()
     {
         transform.Translate(direction * speed * Time.deltaTime);
 
-        if (direction.x != 0 || direction.y != 0)
+        if (direction != Vector2.zero)
         {
             SetAnimatorMovement(direction);
+            animator.SetBool("isMoving", true);
         }
         else
         {
-
+            animator.SetBool("isMoving", false);
         }
     }
 
@@ -70,6 +73,23 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetFloat("xDir", direction.x);
         animator.SetFloat("yDir", direction.y);
+    }
+
+    private void CheckSprint()
+    {
+        currentPressed = Time.realtimeSinceStartup;
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        {
+            if (currentPressed - lastPressed < 0.25f)
+            {
+                speed = 1.25f;
+            }
+            else
+            {
+                speed = 0.65f;
+            }
+            lastPressed = currentPressed;
+        }
     }
 
 }

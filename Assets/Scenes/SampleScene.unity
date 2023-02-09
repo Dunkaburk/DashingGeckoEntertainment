@@ -491,7 +491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slimeCircleCollider: {fileID: 0}
-  slimeBody: {fileID: 0}
 --- !u!58 &1155952068
 CircleCollider2D:
   m_ObjectHideFlags: 0
