@@ -130,30 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2232376197675135712, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 526780698, guid: 37534acc2722a445eb15274688310195, type: 3}
-    - target: {fileID: 2232376197675135712, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2232376197675135715, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2232376197675135715, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 2232376197675135715, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 2232376197675135716, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 1250502078}
     - target: {fileID: 4984445131217439163, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -201,10 +177,6 @@ PrefabInstance:
     - target: {fileID: 6807414728197213876, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6807414728197213876, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
@@ -5188,32 +5160,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1250502072 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6807414728197213876, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-  m_PrefabInstance: {fileID: 347732078}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1250502078
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250502072}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!1 &1685550033
 GameObject:
   m_ObjectHideFlags: 0

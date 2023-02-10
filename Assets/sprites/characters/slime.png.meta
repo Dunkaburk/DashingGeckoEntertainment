@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slime_idle0
+      name: slime_idle_0
       rect:
         serializedVersion: 2
         x: 8
@@ -125,7 +125,7 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,7 +138,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_idle1
+      name: slime_idle_1
       rect:
         serializedVersion: 2
         x: 40
@@ -146,7 +146,7 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,15 +159,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_idle2
+      name: slime_idle_2
       rect:
         serializedVersion: 2
         x: 72
         y: 136
         width: 16
-        height: 11
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,15 +180,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_idle3
+      name: slime_idle_3
       rect:
         serializedVersion: 2
         x: 104
         y: 136
         width: 16
-        height: 11
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,15 +201,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_jump0
+      name: slime_jump_0
       rect:
         serializedVersion: 2
         x: 6
         y: 104
-        width: 19
-        height: 10
+        width: 20
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,15 +222,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_jump1
+      name: slime_jump_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 38
         y: 104
-        width: 12
-        height: 16
+        width: 20
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,15 +243,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_jump2
+      name: slime_jump_2
       rect:
         serializedVersion: 2
-        x: 74
+        x: 70
         y: 104
-        width: 12
+        width: 20
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,15 +264,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_jump3
+      name: slime_jump_3
       rect:
         serializedVersion: 2
-        x: 104
+        x: 102
         y: 104
-        width: 16
-        height: 15
+        width: 20
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,15 +285,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_jump4
+      name: slime_jump_4
       rect:
         serializedVersion: 2
-        x: 136
+        x: 134
         y: 104
-        width: 16
-        height: 12
+        width: 20
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,15 +306,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_jump5
+      name: slime_jump_5
       rect:
         serializedVersion: 2
-        x: 168
+        x: 167
         y: 104
-        width: 16
-        height: 11
+        width: 20
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -327,15 +327,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_long_jump0
+      name: slime_long_jump_0
       rect:
         serializedVersion: 2
         x: 7
         y: 72
         width: 18
-        height: 10
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -348,15 +348,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_long_jump1
+      name: slime_long_jump_1
       rect:
         serializedVersion: 2
-        x: 40
+        x: 39
         y: 72
-        width: 17
-        height: 11
+        width: 18
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -369,15 +369,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_long_jump2
+      name: slime_long_jump_2
       rect:
         serializedVersion: 2
-        x: 74
+        x: 71
         y: 72
-        width: 12
-        height: 20
+        width: 18
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -390,15 +390,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_long_jump3
+      name: slime_long_jump_3
       rect:
         serializedVersion: 2
-        x: 106
+        x: 103
         y: 72
-        width: 12
+        width: 18
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -411,15 +411,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_long_jump4
+      name: slime_long_jump_4
       rect:
         serializedVersion: 2
-        x: 137
+        x: 135
         y: 72
-        width: 13
-        height: 18
+        width: 18
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -432,15 +432,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_long_jump5
+      name: slime_long_jump_5
       rect:
         serializedVersion: 2
-        x: 168
+        x: 167
         y: 72
-        width: 16
-        height: 10
+        width: 18
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -453,15 +453,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_long_jump6
+      name: slime_long_jump_6
       rect:
         serializedVersion: 2
         x: 199
         y: 72
         width: 18
-        height: 9
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -474,15 +474,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_sad_jump0
+      name: slime_hurt_jump_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 8
         y: 40
-        width: 14
-        height: 15
+        width: 16
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -495,15 +495,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_sad_jump1
+      name: slime_hurt_jump1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 40
         y: 40
-        width: 13
+        width: 16
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -516,15 +516,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_sad_jump2
+      name: slime_hurt_jump_2
       rect:
         serializedVersion: 2
         x: 72
         y: 40
         width: 16
-        height: 13
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -537,15 +537,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_death0
+      name: slime_death_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 8
         y: 8
-        width: 14
-        height: 14
+        width: 18
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -558,15 +558,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_death1
+      name: slime_death_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 39
         y: 8
-        width: 13
-        height: 19
+        width: 18
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -579,15 +579,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_death2
+      name: slime_death_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 71
         y: 9
-        width: 14
+        width: 18
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -600,15 +600,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_death3
+      name: slime_death_3
       rect:
         serializedVersion: 2
         x: 104
         y: 8
-        width: 17
-        height: 18
+        width: 18
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -621,15 +621,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slime_death4
+      name: slime_death_4
       rect:
         serializedVersion: 2
         x: 135
         y: 8
         width: 18
-        height: 6
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -652,31 +652,31 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      slime_death1: -1530743987
-      slime_death3: 809750532
-      slime_sad_jump2: -502535521
-      slime_death0: -25577224
-      slime_long_jump4: -1974642384
-      slime_idle0: 1270483186
-      slime_long_jump1: -368109662
-      slime_sad_jump1: 488431463
-      slime_idle1: -29742555
-      slime_long_jump3: -77740603
-      slime_long_jump5: 654905205
-      slime_death2: 174709980
-      slime_idle3: 1061459172
-      slime_jump2: 740692610
-      slime_death4: 1079451243
-      slime_sad_jump0: 1915964576
-      slime_jump3: -2108606874
-      slime_idle2: 844634457
-      slime_long_jump6: 291918539
-      slime_jump1: 648180617
-      slime_jump5: -407658727
-      slime_long_jump0: -1484095261
-      slime_long_jump2: 1601078240
-      slime_jump4: 93734984
-      slime_jump0: -1052979201
+      slime_long_jump_0: -1484095261
+      slime_death_4: 1079451243
+      slime_long_jump_1: -368109662
+      slime_long_jump_6: 291918539
+      slime_hurt_jump1: 488431463
+      slime_idle_3: 1061459172
+      slime_hurt_jump_0: 1915964576
+      slime_idle_2: 844634457
+      slime_death_3: 809750532
+      slime_idle_1: -29742555
+      slime_long_jump_4: -1974642384
+      slime_jump_5: -407658727
+      slime_hurt_jump_2: -502535521
+      slime_long_jump_2: 1601078240
+      slime_jump_0: -1052979201
+      slime_death_2: 174709980
+      slime_long_jump_5: 654905205
+      slime_death_0: -25577224
+      slime_jump_1: 648180617
+      slime_jump_4: 93734984
+      slime_long_jump_3: -77740603
+      slime_death_1: -1530743987
+      slime_idle_0: 1270483186
+      slime_jump_2: 740692610
+      slime_jump_3: -2108606874
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
