@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordAttack : MonoBehaviour
 {
-    Collider2D swordCollider;
+    public Collider2D swordCollider;
     Vector2 rightAttackOffset;
     public float verticalOffset;
 
@@ -22,7 +22,6 @@ public class SwordAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false;
         rightAttackOffset = transform.localPosition;
     }
@@ -76,18 +75,21 @@ public class SwordAttack : MonoBehaviour
 
     public void StopAttack()
     {
-        swordCollider.enabled = false;
+        swordCollider.enabled = !swordCollider.enabled;
+        Debug.Log("Attack Stopped");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
         {
-            SlimeScript enemy = collision.GetComponent<SlimeScript>();
+            Enemy enemy = collision.GetComponent<Enemy>();
             if (enemy != null)
             {
-                enemy.Health -= damage;
+                Debug.Log(enemy.health);
+                enemy.TakeDamage(damage);
                 Debug.Log("Enemy Hit for " + damage + " damage");
+
             }
             else {
                 Debug.Log("Enemy not found");

@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
         ReadMoveInput();
         CheckSprint();
         Move();
+        disableAttackCollider();
         Attack();
 
     }
@@ -89,6 +90,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void disableAttackCollider()
+    {
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            Debug.Log("Attack Collider Disabled");
+            swordAttack.swordCollider.enabled = false;
+        }
+    }
     
 
     private void Move()
@@ -213,6 +222,6 @@ public class PlayerController : MonoBehaviour
         direction = previousDirection;
         speed = previousSpeed;
         rb.velocity = previousVelocity;
-
+        swordAttack.StopAttack();
     }
 }
