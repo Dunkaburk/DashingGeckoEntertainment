@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6a5c7c66a70e5479eb701a13e791df7f
   - enabled: 1
-    path: Assets/Scenes/Floor01.unity
-    guid: 3f5b768443cc549ec857612a3e1db1a0
+    path: Assets/Scenes/RoomScenes/ElevatorRoom.unity
+    guid: 1fff2823eb8ff47f681eba9bf575c0b2
   - enabled: 1
-    path: Assets/Scenes/BaseScene.unity
-    guid: 539a98a1e65224652bba4749df2f57ed
+    path: Assets/Scenes/RoomScenes/A2.unity
+    guid: 3646d848a77954569b51a72306dfce74
+  - enabled: 1
+    path: Assets/Scenes/RoomScenes/A6.unity
+    guid: 4096af28f96a24c1bbf6415facbb7bae
   m_configObjects: {}
