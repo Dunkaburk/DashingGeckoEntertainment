@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7487804186334126692}
   - component: {fileID: 7487804186334126693}
+  - component: {fileID: 1394265439}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0dd001e6a0af423e9fa937e21d7a3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: {fileID: 0}
-  Timer: {fileID: 0}
-  Health: {fileID: 0}
+  CoinsText: {fileID: 0}
+  TimerText: {fileID: 0}
+  HealthText: {fileID: 0}
+--- !u!114 &1394265439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7487804186334126690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7460fd4586fa74d6397a6f03f4dda2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statsManager: {fileID: 7487804186334126693}
+  timeRemaining: 100

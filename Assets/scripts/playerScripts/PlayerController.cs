@@ -64,22 +64,22 @@ public class PlayerController : MonoBehaviour
             
             if (Input.GetKey(KeyCode.W))
             {
-                Debug.Log("Player Going Up");
+                //Debug.Log("Player Going Up");
                 direction += Vector2.up;
             }
             if (Input.GetKey(KeyCode.S))
             {
-                Debug.Log("Player Going Down");
+                //Debug.Log("Player Going Down");
                 direction += Vector2.down;
             }
             if (Input.GetKey(KeyCode.A))
             {
-                Debug.Log("Player Going Left");
+                //Debug.Log("Player Going Left");
                 direction += Vector2.left;
             }
             if (Input.GetKey(KeyCode.D))
             {
-                Debug.Log("Player Going Right");
+                //Debug.Log("Player Going Right");
                 direction += Vector2.right;
             }
         }

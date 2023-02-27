@@ -4,6 +4,8 @@ using UnityEngine;
  using UnityEngine.UI;
  using System.Collections;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class StatsManager : MonoBehaviour
 {
@@ -28,5 +30,7 @@ public class StatsManager : MonoBehaviour
 
     public void updateTimer(int time) {
         TimerText.text = time.ToString();
+        if (time == 0)
+            SceneManager.LoadScene("GameOverScene");
     }
 }

@@ -5,14 +5,16 @@ public class TimeManager : MonoBehaviour
 
     private bool updateTimer = false;
     public StatsManager statsManager;
-    public float timeRemaining = 10;
-    public float orgTime = 10;
+    public float timeRemaining = 100;
+    private float orgTime = 100;
 
 
 
     // Start is called before the first frame update
     void Start()
     {
+        updateTimer = true;
+        orgTime = timeRemaining;
     }
 
     // Update is called once per frame
@@ -20,6 +22,7 @@ public class TimeManager : MonoBehaviour
     {
         if (updateTimer)
         {
+            Debug.Log(timeRemaining);
             timeRemaining -= 1 * Time.deltaTime;
             statsManager.updateTimer((int)timeRemaining);
         }
@@ -38,5 +41,6 @@ public class TimeManager : MonoBehaviour
     public void restartTime()
     {
         timeRemaining = orgTime;
+        updateTimer = true;
     }
 }
