@@ -6,7 +6,6 @@ public class SlimeScript : MonoBehaviour
 {
     public CircleCollider2D slimeCircleCollider;
 
-
     public float Health {
         get { return Health; }
         set { 
@@ -26,6 +25,7 @@ public class SlimeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
     }
 

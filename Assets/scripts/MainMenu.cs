@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Loading floor 1");
-        SceneManager.LoadScene("Floor01");
+        SceneManager.LoadScene("ElevatorRoom");
     }
 
     public void ExitGame()
