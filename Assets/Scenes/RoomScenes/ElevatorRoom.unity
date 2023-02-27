@@ -13511,6 +13511,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 701179677, guid: 39f687012234ae143b5b9b39aa43b295, type: 3}
+      propertyPath: x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 701179677, guid: 39f687012234ae143b5b9b39aa43b295, type: 3}
+      propertyPath: y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 701179677, guid: 39f687012234ae143b5b9b39aa43b295, type: 3}
+      propertyPath: UIPrefab
+      value: 
+      objectReference: {fileID: 3969715860597146027, guid: c4347c2fd2d444934a2248b3c63122b1, type: 3}
     - target: {fileID: 5118515203911301478, guid: 39f687012234ae143b5b9b39aa43b295, type: 3}
       propertyPath: m_Name
       value: Elevator
@@ -13941,33 +13953,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &701179677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701179672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfe980b811dde4610bc62d9838f558f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIPrefab: {fileID: 6994928289026265813, guid: c4347c2fd2d444934a2248b3c63122b1, type: 3}
-  distance: 5
-  interacted: 0
---- !u!114 &701179678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701179672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4eacbf980fcf5401ebd1559286db32fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &740764251
 PrefabInstance:
   m_ObjectHideFlags: 0

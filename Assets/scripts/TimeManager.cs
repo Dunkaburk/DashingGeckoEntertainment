@@ -22,7 +22,6 @@ public class TimeManager : MonoBehaviour
     {
         if (updateTimer)
         {
-            Debug.Log(timeRemaining);
             timeRemaining -= 1 * Time.deltaTime;
             statsManager.updateTimer((int)timeRemaining);
         }
@@ -40,6 +39,7 @@ public class TimeManager : MonoBehaviour
 
     public void restartTime()
     {
+        Debug.Log("here");
         timeRemaining = orgTime;
         updateTimer = true;
     }

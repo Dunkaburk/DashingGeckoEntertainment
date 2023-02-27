@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ElevatorScript : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class ElevatorScript : MonoBehaviour
         if (ib.interacted)
         {
             tm.restartTime();
+            SceneManager.LoadScene("NextScene");
         }
     }
 }

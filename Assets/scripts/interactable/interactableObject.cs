@@ -8,11 +8,12 @@ public class interactableObject : MonoBehaviour
     public GameObject UIPrefab;
     public float distance = 10;
     public bool interacted = false;
+    public float x= 0, y= 0;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectsWithTag("Player")[0];
-        UIPrefab = Instantiate(UIPrefab, new Vector3(this.gameObject.transform.position.x + UIPrefab.GetComponent<SpriteRenderer>().bounds.size.x/2, this.gameObject.transform.position.y + UIPrefab.GetComponent<SpriteRenderer>().bounds.size.y/2, 0), Quaternion.identity);
+        UIPrefab = Instantiate(UIPrefab, new Vector3(this.gameObject.transform.position.x + UIPrefab.GetComponent<SpriteRenderer>().bounds.size.x/2+x, this.gameObject.transform.position.y + y + UIPrefab.GetComponent<SpriteRenderer>().bounds.size.y/2, 0), Quaternion.identity);
         UIPrefab.gameObject.SetActive(false);
 
     }
@@ -23,19 +24,19 @@ public class interactableObject : MonoBehaviour
         if (Vector3.Distance(transform.position, player.transform.position) < distance)
         {
             UIPrefab.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 interacted = true;
             }
-            else if(Input.GetKeyUp(KeyCode.R))
+            else if(Input.GetKeyUp(KeyCode.E))
             {
                 interacted = false;
 
             }
-            else {
+        }
+        else
+        {
             UIPrefab.SetActive(false);
-            }
-
         }
     }
 }
