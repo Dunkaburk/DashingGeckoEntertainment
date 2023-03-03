@@ -13523,6 +13523,10 @@ PrefabInstance:
       propertyPath: UIPrefab
       value: 
       objectReference: {fileID: 3969715860597146027, guid: c4347c2fd2d444934a2248b3c63122b1, type: 3}
+    - target: {fileID: 701179677, guid: 39f687012234ae143b5b9b39aa43b295, type: 3}
+      propertyPath: distance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5118515203911301478, guid: 39f687012234ae143b5b9b39aa43b295, type: 3}
       propertyPath: m_Name
       value: Elevator
@@ -15271,6 +15275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: A2
   tilemapCollider: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!1 &1920079588
 GameObject:
   m_ObjectHideFlags: 0

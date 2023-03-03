@@ -7,15 +7,18 @@ public class SlimeScript : MonoBehaviour
     public CircleCollider2D slimeCircleCollider;
 
     public float Health {
-        get { return Health; }
+        get { return health; }
         set { 
-            Health = value; 
-            if (Health <= 0)
+            health = value; 
+            if (health <= 0)
             {
-                Debug.Log("Slime Killed");
+                Debug.Log("Enemy Killed");
+                Die();
             }
         }
     }
+    public float health = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,13 @@ public class SlimeScript : MonoBehaviour
 
         
     }
+
+    public void TakeDamage(float damage)
+    {
+        Debug.Log("Enemy took " + damage + " damage");
+        Health -= damage;
+    }
+
 
     public void Die()
     {
