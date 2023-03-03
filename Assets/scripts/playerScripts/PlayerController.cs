@@ -104,7 +104,8 @@ public class PlayerController : MonoBehaviour
     {
         if (canMove) {
             //transform.Translate(direction * speed * Time.deltaTime); Old code.
-            rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
+            //rb.velocity = new Vector2(direction.x * speed, direction.y * speed);
+            rb.velocity = direction.normalized * speed; // Normalizes the speed by setting magnitude to 1, even during diagonal movement
 
             if (direction != Vector2.zero)
             {
@@ -126,18 +127,28 @@ public class PlayerController : MonoBehaviour
 
     private void CheckSprint()
     {
-        currentPressed = Time.realtimeSinceStartup;
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
-            if (currentPressed - lastPressed < 0.25f)
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
                 speed = 1.25f;
             }
-            else
+        }
+        else
+        {
+            currentPressed = Time.realtimeSinceStartup;
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
             {
-                speed = 0.65f;
+                if (currentPressed - lastPressed < 0.25f)
+                {
+                    speed = 1.25f;
+                }
+                else
+                {
+                    speed = 0.65f;
+                }
+                lastPressed = currentPressed;
             }
-            lastPressed = currentPressed;
         }
     }
 
