@@ -83,7 +83,7 @@ public class SwordAttack : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            Enemy enemy = collision.GetComponent<Enemy>();
+            SlimeScript enemy = collision.GetComponent<SlimeScript>();
             if (enemy != null)
             {
                 Debug.Log(enemy.health);

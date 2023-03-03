@@ -12,6 +12,7 @@ public class DoorScript : MonoBehaviour
 
     public string sceneToLoad;
     public TilemapCollider2D tilemapCollider;
+    public GameObject spawnPoint;
 
     public void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,6 +30,11 @@ public class DoorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //find selected spawn point in scene       Currently not implemented
+        //spawnPoint = GameObject.FindWithTag("SpawnPoint");
+        //set player position to spawn point
+        //GameObject.FindWithTag("Player").transform.position = spawnPoint.transform.position;
+        //find tilemap collider
         tilemapCollider = GetComponent<TilemapCollider2D>();
     }
 
