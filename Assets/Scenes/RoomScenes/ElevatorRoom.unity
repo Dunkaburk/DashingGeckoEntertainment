@@ -13966,7 +13966,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2232376197675135715, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4984445131217439163, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
       propertyPath: m_RootOrder
@@ -14274,6 +14274,7 @@ GameObject:
   - component: {fileID: 1253535658}
   - component: {fileID: 1253535660}
   - component: {fileID: 1253535659}
+  - component: {fileID: 1253535661}
   m_Layer: 0
   m_Name: Downdoor2
   m_TagString: Untagged
@@ -14437,6 +14438,21 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1253535661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253535657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ede20b10940264ee6adc584f51cad1ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: A8
+  tilemapCollider: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!1 &1394265436 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7487804186334126690, guid: ce8ca5d070e1b473aa0a2f96dd66a228, type: 3}
@@ -15255,7 +15271,7 @@ TilemapCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

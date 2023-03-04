@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Attack Collider Disabled");
             swordAttack.swordCollider.enabled = false;
+            
         }
     }
     
