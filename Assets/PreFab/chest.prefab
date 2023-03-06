@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cs: {fileID: 8406728297700965634, guid: 1459af72c8916cd48a30ac220c38ca04, type: 3}
   c: {fileID: 4113261185991225319, guid: 6e48dfa1f5863274cbc8f174872a1970, type: 3}
+  pot: {fileID: 2864866035237593237, guid: 67979d683b88e446ba415add8412627f, type: 3}
 --- !u!95 &8453269085682448547
 Animator:
   serializedVersion: 5

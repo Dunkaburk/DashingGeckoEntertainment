@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     //List to keep track of cleared rooms
     public static List<string> clearedRooms = new List<string>();
     // Start is called before the first frame update
+    public static bool alldeadEnemies = false;
     void Start()
     {
         checkIfAlreadyCleared();
@@ -31,7 +32,17 @@ public class GameManager : MonoBehaviour
     }
 
     public static void checkIfCleared(){
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0){
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        alldeadEnemies = true;
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (enemies[i].GetComponent<Enemy>().IsDead == false)
+            {
+                alldeadEnemies = false;
+            }
+        }
+        if (alldeadEnemies)
+        {
             AddClearedRoom();
         }
     }
