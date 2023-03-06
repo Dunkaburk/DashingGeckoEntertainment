@@ -39,4 +39,9 @@ public class ShopScript : MonoBehaviour
     {
 
     }
+
+    public void addSpeed()
+    {
+
+    }
 }
