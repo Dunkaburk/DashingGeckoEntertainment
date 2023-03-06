@@ -576,7 +576,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Use arrowkeys to \nattack in a direction"
+  m_text: "Use arrowkeys to \nattack in a given direction"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -1344,7 +1344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Use WASD to \nmove player"
+  m_text: "Use WASD to \nmove the player"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -2055,7 +2055,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controlls
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -3783,7 +3783,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Objektiv
+  m_text: Objective
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -4353,8 +4353,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Press E to interakt with the world when the \nbubble pups up. For example
-    the shop keeper or chests"
+  m_text: "Press E to interact with the world when the \nbubble pops up. For example
+    the shop keeper or chests."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -5310,7 +5310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Controlls
+  m_text: Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -5521,7 +5521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Elevator game
+  m_text: Temporal Odyssey
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -5548,7 +5548,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 132.4
+  m_fontSize: 103.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6721,9 +6721,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Survive as long as posible and try to get back to your time by fixing
-    the \ntime mechine that is an elevator. You can fix it by buying parts from the
-    shop \nkeeper and earning gold by finding loot and killing monsters. "
+  m_text: "Survive as long as possible and try to get back to your time by fixing
+    the \nmalfunctioning elevator (time machine). You can fix it by buying spare
+    \nparts from the shop keeper and earning gold by finding loot and killing monsters. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}

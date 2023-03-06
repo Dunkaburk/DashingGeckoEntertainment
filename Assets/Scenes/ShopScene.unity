@@ -960,7 +960,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Welcome to my shop! Hope you will find somting you like...                
+  m_text: Welcome to my shop! Hope you will find something you like...                
     Press E
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -8472,7 +8472,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hmmm... I saw your problem over there with your time mechine.            
+  m_text: Hmmm... I saw your problem over there with your time machine.            
     Press E
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
