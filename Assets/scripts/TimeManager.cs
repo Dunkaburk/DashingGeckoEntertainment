@@ -44,6 +44,7 @@ public class TimeManager : MonoBehaviour
     {
         Debug.Log("here");
         GameManager.time = GameManager.startTime;
+        timeRemaining = GameManager.time;
         updateTimer = true;
     }
 }
