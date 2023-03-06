@@ -7,7 +7,18 @@ public class Enemy : MonoBehaviour
     private Animator animator;
     private SpriteRenderer _renderer;
     public GameObject player;
-    bool IsDead => animator.GetBool("IsDead");
+
+    public GameObject lootDrop;
+    bool IsDead
+    {
+        get => animator.GetBool("IsDead");
+        set => animator.SetBool("IsDead", value);
+    }
+    bool IsMoving
+    {
+        get => animator.GetBool("IsMoving");
+        set => animator.SetBool("IsMoving", value);
+    }
     public float Health
     {
         get { return health; }
@@ -15,22 +26,24 @@ public class Enemy : MonoBehaviour
         {
             health = value;
 
-            if (health <= 0)
+            if (health <= 0 && !IsDead)
             {
-                Debug.Log("Enemy Killed");
-                animator.SetBool("IsDead", IsDead);
+                Debug.Log(gameObject.name + " Killed");
+                IsDead = true;
+                Instantiate(lootDrop, transform.position, Quaternion.identity);
+                Debug.Log("Loot spawned");
             }
         }
     }
 
-    public float health = 4;
+    public float health;
 
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.SetBool("IsDead", false);
+        IsDead = false;
 
         _renderer = GetComponent<SpriteRenderer>();
         if (_renderer == null)
@@ -46,11 +59,11 @@ public class Enemy : MonoBehaviour
         if (!IsDead) {
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01f)
             {
-                animator.SetBool("IsMoving", true);
+                IsMoving = true;
             }
             else
             {
-                animator.SetBool("IsMoving", false);
+                IsMoving = false;
             }
 
 
@@ -68,7 +81,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        Debug.Log("Enemy took " + damage + " damage");
+        Debug.Log(gameObject.name + " took " + damage + " damage");
         Health -= damage;
     }
 
