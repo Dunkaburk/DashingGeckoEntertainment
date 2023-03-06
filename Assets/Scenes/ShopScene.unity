@@ -233,7 +233,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1.3540835
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -297,6 +297,8 @@ MonoBehaviour:
   UIPrefab: {fileID: 479958093313642718, guid: c4347c2fd2d444934a2248b3c63122b1, type: 3}
   distance: 3
   interacted: 0
+  x: 0
+  y: 0
 --- !u!212 &1309704130
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -357,7 +359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309704128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.46, y: -0.49, z: 0}
+  m_LocalPosition: {x: 1.4, y: -0.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -485,3 +487,5 @@ MonoBehaviour:
   UIPrefab: {fileID: 479958093313642718, guid: c4347c2fd2d444934a2248b3c63122b1, type: 3}
   distance: 3
   interacted: 0
+  x: 0
+  y: 0
