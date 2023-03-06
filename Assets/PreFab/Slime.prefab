@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6703956339660386000}
   - component: {fileID: 3729831397287656282}
   - component: {fileID: 3729831397287656287}
-  - component: {fileID: 3729831397287656280}
   - component: {fileID: -3843718076613674946}
   - component: {fileID: 245411468603820149}
   - component: {fileID: 3990049880737530930}
+  - component: {fileID: 635700826}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -104,20 +104,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.065
---- !u!114 &3729831397287656280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3362667730186860957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edcad9e4913aa71408fb4acbac854ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slimeCircleCollider: {fileID: 3729831397287656287}
+  m_Radius: 0.08
 --- !u!95 &-3843718076613674946
 Animator:
   serializedVersion: 5
@@ -128,7 +115,7 @@ Animator:
   m_GameObject: {fileID: 3362667730186860957}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 18717b0cfd1cd934784044ea97547747, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +140,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -171,5 +158,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2212246b087bb428cc95babd848eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 6807414728197213876, guid: d415e0a834b599144bfeb2387d764da0, type: 3}
-  speed: 0
+  player: {fileID: 0}
+  speed: 0.4
+  direction: {x: 0, y: 0}
+--- !u!114 &635700826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3362667730186860957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 457525cd530834156bc45db754844c3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  health: 4
