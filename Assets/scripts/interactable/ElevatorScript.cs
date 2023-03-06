@@ -25,7 +25,7 @@ public class ElevatorScript : MonoBehaviour
         if (ib.interacted)
         {
             tm.restartTime();
-            SceneManager.LoadScene("NextScene");
+            SceneManager.LoadScene("ShopScene");
         }
     }
 }
