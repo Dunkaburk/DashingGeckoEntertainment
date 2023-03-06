@@ -25,7 +25,9 @@ public class ElevatorScript : MonoBehaviour
         if (ib.interacted)
         {
             tm.restartTime();
-            SceneManager.LoadScene("NextScene");
+            SceneManager.LoadScene("ShopScene");
+            GameManager.spawnPointx = 0;
+            GameManager.spawnPointy = 0;
         }
     }
 }

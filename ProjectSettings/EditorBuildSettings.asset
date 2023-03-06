@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/NextScene.unity
     guid: 2c3355f082ae44365a3f592976ed9c49
   - enabled: 1
+    path: Assets/Scenes/ShopScene.unity
+    guid: 3b69948ed11634502a2e20ac64115325
+  - enabled: 1
     path: Assets/Scenes/RoomScenes/A7.unity
     guid: ac043cb3a977146b685b7bc2158b3ec0
   - enabled: 1

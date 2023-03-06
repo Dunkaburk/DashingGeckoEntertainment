@@ -5,7 +5,7 @@ using UnityEngine;
 public class LootPickup : MonoBehaviour
 {
     public int pickupQuantity;
-    public enum pickupObject {COIN, KEY};
+    public enum pickupObject {COIN, KEY, POTION};
     public pickupObject currentObject;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,6 +21,10 @@ public class LootPickup : MonoBehaviour
                 case pickupObject.KEY:
                     GameManager.keys += pickupQuantity;
                     Debug.Log("Key picked up");
+                    break;
+                case pickupObject.POTION:
+                    GameManager.health += pickupQuantity;
+                    Debug.Log("Potion picked up");
                     break;
                 default:
                     Debug.LogError("Invalid pickupObject");
