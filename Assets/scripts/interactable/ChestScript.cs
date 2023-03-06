@@ -12,6 +12,7 @@ public class ChestScript : MonoBehaviour
     private Animator anim;
     public GameObject cs;
     public GameObject c;
+    public GameObject pot;
 
 
     // Start is called before the first frame update
@@ -33,6 +34,8 @@ public class ChestScript : MonoBehaviour
             Instantiate(cs, new Vector3(gameObject.transform.position.x+(float)0.01, gameObject.transform.position.y-(float)0.07, 0) , Quaternion.identity);
             Instantiate(c, new Vector3(gameObject.transform.position.x+(float)0.1, gameObject.transform.position.y-(float)0.07, 0) , Quaternion.identity);
             Instantiate(c, new Vector3(gameObject.transform.position.x-(float)0.08, gameObject.transform.position.y-(float)0.08, 0) , Quaternion.identity);
+            Instantiate(pot, new Vector3(gameObject.transform.position.x + (float)0.08, gameObject.transform.position.y - (float)0.12, 0), Quaternion.identity);
+
         }
     }
 
