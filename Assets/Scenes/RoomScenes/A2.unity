@@ -19235,6 +19235,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 645314561}
+    - target: {fileID: 1891378831309048288, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3362667730186860957, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
       propertyPath: m_Name
       value: Slime (1)

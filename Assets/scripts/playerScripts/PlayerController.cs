@@ -67,7 +67,6 @@ public class PlayerController : MonoBehaviour
         CheckSprint();
         Move();
         Attack();
-        CheckHealth();
 
     }
 
@@ -128,7 +127,7 @@ public class PlayerController : MonoBehaviour
         IsDead = true;
         canMove = false;
         Debug.Log("Player is dead");
-        StartCoroutine(LoadAfterDelay(4));
+        StartCoroutine(LoadAfterDelay(1));
         
     }
 
@@ -294,23 +293,15 @@ public class PlayerController : MonoBehaviour
             {
                 GameManager.health -= 20;
                 Debug.Log("Player Hit for 20 damage, Player Health: " + GameManager.health);
-                TakeKnockback();
+                CheckHealth();
             }
             else if (collision.gameObject.name == "Orc")
             {
                 GameManager.health -= 40;
                 Debug.Log("Player Hit for 20 damage, Player Health: " + GameManager.health);
-                TakeKnockback();
+                CheckHealth();
             }
         }
-    }
-
-    private void TakeKnockback()
-    {
-        lockMovement();
-        //apply force in opposite direction of enemy. Currently only sends player in opposite direction of last movement.
-        rb.AddForce(-direction * 200);        
-        unlockMovement();
     }
 
 
