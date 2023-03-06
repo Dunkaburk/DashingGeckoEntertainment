@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
 
     public GameObject SettingsPanel;
+    public GameObject[] HowtoPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +48,29 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Closing Settings");
         SettingsPanel.SetActive(false);
-        
     }
 
+
+    public void OpenHowTo(int i)
+    {
+        HowtoPanel[i].SetActive(true);
+        if(i > 0)
+        {
+            CloseHowTo(i - 1);
+        }
+    }
+
+    public void CloseHowTo(int i)
+    {
+        HowtoPanel[i].SetActive(false);
+    }
+
+    public void BackHowTo(int i)
+    {
+        HowtoPanel[i].SetActive(true);
+        if (i < HowtoPanel.Length)
+        {
+            CloseHowTo(i + 1);
+        }
+    }
 }

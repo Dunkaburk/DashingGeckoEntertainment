@@ -2,41 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShopScript : MonoBehaviour
+public class ChestScript : MonoBehaviour
 {
 
     private interactableObject ib;
-    public float distance = 10;
-    public GameObject panel;
+    private bool open = false;
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
         ib = this.gameObject.GetComponent<interactableObject>();
+        anim = gameObject.GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (ib.interacted)
+        if (ib.interacted && open == false)
         {
-            panel.SetActive(true);
+            open = true;
+            anim.Play("chestAnimation");
+            ib.hideUI();
         }
-    }
-
-    public void ClosePanel()
-    {
-        panel.SetActive(false);
-    }
-
-    public void AddTime()
-    {
-
-    }
-
-    public void heal()
-    {
-
     }
 }
