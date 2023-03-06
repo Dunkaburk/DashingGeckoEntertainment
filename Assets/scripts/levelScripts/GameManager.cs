@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static int coins = 10;
     public static int health = 100; 
-    public int startTime = 120;
+    public static int startTime = 120;
     public static int time = 120;
     public static int keys = 0; 
     public static float spawnPointx = 0;
@@ -45,6 +45,5 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
 
 }

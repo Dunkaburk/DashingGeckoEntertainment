@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIPrefab: {fileID: 3969715860597146027, guid: c4347c2fd2d444934a2248b3c63122b1, type: 3}
-  distance: 10
+  distance: 0.5
   interacted: 0
   x: 0
   y: 0
@@ -136,5 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5929b547ad1004d9089fa2630e69a51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 10
+  distance: 1
   panel: {fileID: 0}

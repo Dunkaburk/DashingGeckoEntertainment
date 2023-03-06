@@ -43,7 +43,7 @@ public class TimeManager : MonoBehaviour
     public void restartTime()
     {
         Debug.Log("here");
-        timeRemaining = orgTime;
+        GameManager.time = GameManager.startTime;
         updateTimer = true;
     }
 }
