@@ -4,52 +4,66 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    private Animator animator;
+    private SpriteRenderer _renderer;
+    public GameObject player;
+    bool IsDead => animator.GetBool("IsDead");
     public float Health
     {
         get { return health; }
         set
         {
             health = value;
-            animator.SetFloat("Health", health);
+
             if (health <= 0)
             {
                 Debug.Log("Enemy Killed");
-                Die();
-            }
-            else if (health <= 3 && !isHurt)
-            {
-                isHurt = true;
-                animator.SetTrigger("Hurt");
+                animator.SetBool("IsDead", IsDead);
             }
         }
     }
 
     public float health = 4;
-    private Animator animator;
-    private bool isMoving = false;
-    private bool isHurt = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        animator.SetBool("IsDead", false);
+
+        _renderer = GetComponent<SpriteRenderer>();
+        if (_renderer == null)
+        {
+            Debug.LogError("Enemy Sprite is missing a renderer");
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01f)
-        {
-            isMoving = true;
-            animator.SetBool("IsMoving", true);
+        if (!IsDead) {
+            if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.01f)
+            {
+                animator.SetBool("IsMoving", true);
+            }
+            else
+            {
+                animator.SetBool("IsMoving", false);
+            }
+
+
+            if ((player.transform.position - transform.position).x > 0)
+            {
+                _renderer.flipX = false;
+            }
+            else
+            {
+                _renderer.flipX = true;
+            }
         }
-        else
-        {
-            isMoving = false;
-            animator.SetBool("IsMoving", false);
-        }
+        
     }
 
     public void TakeDamage(float damage)
@@ -58,15 +72,4 @@ public class Enemy : MonoBehaviour
         Health -= damage;
     }
 
-    public void Die()
-    {
-        animator.SetTrigger("Die");
-        StartCoroutine(DestroyAfterAnimation());
-    }
-
-    private IEnumerator DestroyAfterAnimation()
-    {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length); // wait for animation to finish
-        Destroy(gameObject); // destroy object after animation is finished
-    }
 }

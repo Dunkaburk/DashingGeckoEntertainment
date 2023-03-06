@@ -10,25 +10,33 @@ public class AIChase : MonoBehaviour
     private float distance;
     public Vector2 direction;
     private Animator animator;
+    bool IsMoving {
+        get => animator.GetBool("IsMoving");
+        set => animator.SetBool("IsMoving", value);
+        }
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        IsMoving = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        distance = Vector2.Distance(transform.position, player.transform.position); // Checks the distance between the Enemy and the player
-        direction = player.transform.position - transform.position;
-
-        if(distance < 1) // If player is close to Enemy
+        if (animator.GetBool("IsDead") == false)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime); // Follow the player
-        }
+            distance = Vector2.Distance(transform.position, player.transform.position); // Checks the distance between the Enemy and the player
+            direction = player.transform.position - transform.position;
 
-        Move();
+            if (distance < 1.5) // If player is close to Enemy
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime); // Follow the player
+            }
+
+            Move();
+        }
     }
 
     private void Move()
@@ -36,17 +44,16 @@ public class AIChase : MonoBehaviour
         if (direction != Vector2.zero)
         {
             SetAnimatorMovement(direction);
-            animator.SetBool("isMoving", true);
+            IsMoving = true;
         }
         else
         {
-            animator.SetBool("isMoving", false);
+            IsMoving = false;
         }
     }
 
     private void SetAnimatorMovement(Vector2 direction)
     {
         animator.SetFloat("xDir", direction.x);
-        animator.SetFloat("yDir", direction.y);
     }
 }
