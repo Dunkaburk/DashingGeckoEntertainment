@@ -13,7 +13,8 @@ public class ShopScript : MonoBehaviour
     void Start()
     {
         ib = this.gameObject.GetComponent<interactableObject>();
-
+        // reset timer 
+        GameManager.time = 120;
     }
 
     // Update is called once per frame
