@@ -5521,7 +5521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Elevator game
+  m_text: Temporal Odyssey
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
   m_sharedMaterial: {fileID: -8850456718627920964, guid: 4c9981a09f3b74b018cfc560672a66a9, type: 2}
@@ -5548,7 +5548,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 132.4
+  m_fontSize: 103.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
