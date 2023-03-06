@@ -12,12 +12,18 @@ public class StatsManager : MonoBehaviour
     public TMP_Text CoinsText;   
     public TMP_Text TimerText;
     public TMP_Text HealthText;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-      
+        
+    }
 
+    void Update() {
+        updateCoins(GameManager.coins);
+        updateHealth(GameManager.health);
+        updateTimer(GameManager.time);
     }
 
     public void updateHealth(int health) {

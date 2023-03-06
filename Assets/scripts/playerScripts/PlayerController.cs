@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour
         ReadMoveInput();
         CheckSprint();
         Move();
-        disableAttackCollider();
         Attack();
+        CheckHealth();
 
     }
 
@@ -95,8 +95,21 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             Debug.Log("Attack Collider Disabled");
+            swordAttack.ActiveAttack = !swordAttack.ActiveAttack;
             swordAttack.swordCollider.enabled = false;
             
+        }
+    }
+
+    private void CheckHealth()
+    {
+        if (GameManager.health <= 0)
+        {
+            canMove = false;
+            Debug.Log("Player is dead");
+            // TODO: Connect to death animation and kill player
+            //animator.SetBool("isDead", true);
+            //StartCoroutine(Death());
         }
     }
     
@@ -163,46 +176,54 @@ public class PlayerController : MonoBehaviour
             {
                 swordAttack.attackDirection = SwordAttack.AttackDirection.Up;
                 attacking = true;
+                swordAttack.ActiveAttack = true;
                 attackTimer = attackCd;
                 previousDirection = direction;
                 animator.SetFloat("xDir", 0);
                 animator.SetFloat("yDir", 1);
                 Debug.Log("Player Attack Up");
+                swordAttack.Attack();
 
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 swordAttack.attackDirection = SwordAttack.AttackDirection.Down;
                 attacking = true;
+                swordAttack.ActiveAttack = true;
                 attackTimer = attackCd;
                 previousDirection = direction;
                 animator.SetFloat("xDir", 0);
                 animator.SetFloat("yDir", -1);
                 Debug.Log("Player Attack Down");
+                swordAttack.Attack();
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 swordAttack.attackDirection = SwordAttack.AttackDirection.Left;
                 attacking = true;
+                swordAttack.ActiveAttack = true;
                 attackTimer = attackCd;
                 previousDirection = direction;
                 animator.SetFloat("xDir", -1);
                 animator.SetFloat("yDir", 0);
                 Debug.Log("Player Attack Left");
+                swordAttack.Attack();
                 
                 }
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 swordAttack.attackDirection = SwordAttack.AttackDirection.Right;
                 attacking = true;
+                swordAttack.ActiveAttack = true;
                 attackTimer = attackCd;
                 previousDirection = direction;
                 animator.SetFloat("xDir", 1);
                 animator.SetFloat("yDir", 0);
                 Debug.Log("Player Attack Right");
+                swordAttack.Attack();
+
             }
             
-            swordAttack.Attack();
         }
 
         if (attackTimer > 0)
@@ -235,5 +256,30 @@ public class PlayerController : MonoBehaviour
         speed = previousSpeed;
         rb.velocity = previousVelocity;
         swordAttack.StopAttack();
+        swordAttack.ActiveAttack = false;
     }
+
+    //----------
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (playerRectangleCollider.bounds.Intersects(collision.bounds) && collision.gameObject.tag == "Enemy")
+        {
+            GameManager.health -= 20;
+            Debug.Log("Player Hit for 20 damage, Player Health: " + GameManager.health);
+            TakeKnockback();
+        }
+    }
+
+    private void TakeKnockback()
+    {
+        lockMovement();
+        //apply force in opposite direction of enemy. Currently only sends player in opposite direction of last movement.
+        rb.AddForce(-direction * 200);        
+        unlockMovement();
+
+    }
+
+
+
 }

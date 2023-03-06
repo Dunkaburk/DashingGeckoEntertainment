@@ -7,6 +7,7 @@ public class SwordAttack : MonoBehaviour
     public Collider2D swordCollider;
     Vector2 rightAttackOffset;
     public float verticalOffset;
+    public bool ActiveAttack = false;
 
     public float damage = 3f;
 
@@ -81,7 +82,7 @@ public class SwordAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Enemy")
+        if ((collision.tag == "Enemy") && ActiveAttack == true)
         {
             SlimeScript enemy = collision.GetComponent<SlimeScript>();
             if (enemy != null)

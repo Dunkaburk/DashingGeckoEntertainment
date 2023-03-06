@@ -5,8 +5,9 @@ public class TimeManager : MonoBehaviour
 
     private bool updateTimer = false;
     public StatsManager statsManager;
-    public float timeRemaining = 100;
+    public float timeRemaining;
     private float orgTime = 100;
+    public GameManager gameManager;
 
 
 
@@ -14,6 +15,7 @@ public class TimeManager : MonoBehaviour
     void Start()
     {
         updateTimer = true;
+        timeRemaining = GameManager.time;
         orgTime = timeRemaining;
     }
 
@@ -23,6 +25,7 @@ public class TimeManager : MonoBehaviour
         if (updateTimer)
         {
             timeRemaining -= 1 * Time.deltaTime;
+            GameManager.time = (int)timeRemaining;
             statsManager.updateTimer((int)timeRemaining);
         }
     }
