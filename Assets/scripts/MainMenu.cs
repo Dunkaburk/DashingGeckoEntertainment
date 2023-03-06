@@ -7,12 +7,7 @@ public class MainMenu : MonoBehaviour
 {
 
     public GameObject SettingsPanel;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] HowToPlayPanels;
 
     // Update is called once per frame
     void Update()
@@ -47,7 +42,42 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Closing Settings");
         SettingsPanel.SetActive(false);
-        
     }
+
+    public void CloseHowToPlay0()
+    {
+        HowToPlayPanels[0].SetActive(false);
+    }
+
+    public void CloseHowToPlay1()
+    {
+        HowToPlayPanels[1].SetActive(false);
+    }
+
+
+    public void CloseHowToPlay2()
+    {
+        HowToPlayPanels[2].SetActive(false);
+    }
+
+
+    public void OpenHowToPlay0()
+    {
+        HowToPlayPanels[0].SetActive(true);
+    }
+
+
+    public void OpenHowToPlay1()
+    {
+        HowToPlayPanels[1].SetActive(true);
+    }
+
+
+    public void OpenHowToPlay2()
+    {
+        HowToPlayPanels[2].SetActive(true);
+    }
+
+
 
 }
