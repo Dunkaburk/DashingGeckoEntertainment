@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class PlayerController : MonoBehaviour
 {
@@ -39,11 +41,23 @@ public class PlayerController : MonoBehaviour
     private Vector2 previousVelocity = Vector2.zero;
     private float previousSpeed = 0f;
 
+    bool IsDead
+    {
+        get => animator.GetBool("IsDead");
+        set => animator.SetBool("IsDead", value);
+    }
+    bool IsMoving
+    {
+        get => animator.GetBool("IsMoving");
+        set => animator.SetBool("IsMoving", value);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+        IsDead = false;
+        IsMoving = false;
     }
 
     // Update is called once per frame, Note: Can use FixedUpdate for things that should only happen a couple of times per second
@@ -105,14 +119,24 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.health <= 0)
         {
-            canMove = false;
-            Debug.Log("Player is dead");
-            // TODO: Connect to death animation and kill player
-            //animator.SetBool("isDead", true);
-            //StartCoroutine(Death());
+            Death();
         }
     }
-    
+
+    private void Death()
+    {
+        IsDead = true;
+        canMove = false;
+        Debug.Log("Player is dead");
+        StartCoroutine(LoadAfterDelay(4));
+        
+    }
+
+    IEnumerator LoadAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("GameOverScene");
+    }
 
     private void Move()
     {
@@ -124,11 +148,11 @@ public class PlayerController : MonoBehaviour
             if (direction != Vector2.zero)
             {
                 SetAnimatorMovement(direction);
-                animator.SetBool("isMoving", true);
+                IsMoving = true;
             }
             else
             {
-                animator.SetBool("isMoving", false);
+                IsMoving = false;
             }
         }
     }
@@ -263,11 +287,21 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (playerRectangleCollider.bounds.Intersects(collision.bounds) && collision.gameObject.tag == "Enemy")
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy != null && enemy.IsDead == false && playerRectangleCollider.bounds.Intersects(collision.bounds) && collision.gameObject.tag == "Enemy")
         {
-            GameManager.health -= 20;
-            Debug.Log("Player Hit for 20 damage, Player Health: " + GameManager.health);
-            TakeKnockback();
+            if (collision.gameObject.name == "Slime")
+            {
+                GameManager.health -= 20;
+                Debug.Log("Player Hit for 20 damage, Player Health: " + GameManager.health);
+                TakeKnockback();
+            }
+            else if (collision.gameObject.name == "Orc")
+            {
+                GameManager.health -= 40;
+                Debug.Log("Player Hit for 20 damage, Player Health: " + GameManager.health);
+                TakeKnockback();
+            }
         }
     }
 
@@ -277,7 +311,6 @@ public class PlayerController : MonoBehaviour
         //apply force in opposite direction of enemy. Currently only sends player in opposite direction of last movement.
         rb.AddForce(-direction * 200);        
         unlockMovement();
-
     }
 
 

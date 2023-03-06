@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     public GameObject player;
 
     public GameObject lootDrop;
-    bool IsDead
+    public bool IsDead
     {
         get => animator.GetBool("IsDead");
         set => animator.SetBool("IsDead", value);
@@ -44,6 +44,7 @@ public class Enemy : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         IsDead = false;
+        IsMoving= false;
 
         _renderer = GetComponent<SpriteRenderer>();
         if (_renderer == null)

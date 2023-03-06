@@ -16,11 +16,11 @@ public class LootPickup : MonoBehaviour
             {
                 case pickupObject.COIN:
                     GameManager.coins += pickupQuantity;
-                    Debug.Log("Coin Spawned");
+                    Debug.Log("Coins picked up");
                     break;
                 case pickupObject.KEY:
                     GameManager.keys += pickupQuantity;
-                    Debug.Log("Key Spawned");
+                    Debug.Log("Key picked up");
                     break;
                 default:
                     Debug.LogError("Invalid pickupObject");

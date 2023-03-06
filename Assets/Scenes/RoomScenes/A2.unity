@@ -19231,10 +19231,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 635700826, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 645314561}
     - target: {fileID: 3362667730186860957, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
       propertyPath: m_Name
       value: Slime (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3990049880737530930, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 645314561}
     - target: {fileID: 6703956339660386000, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -20270,10 +20278,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 635700826, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 645314561}
     - target: {fileID: 3362667730186860957, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
       propertyPath: m_Name
       value: Slime (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3990049880737530930, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 645314561}
     - target: {fileID: 6703956339660386000, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -20348,6 +20364,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 635700826, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 645314561}
     - target: {fileID: 245411468603820149, guid: 9264ec6c7e763064a9ad95ced78f9dcb, type: 3}
       propertyPath: m_BodyType
       value: 0
