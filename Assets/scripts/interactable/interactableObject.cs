@@ -9,6 +9,7 @@ public class interactableObject : MonoBehaviour
     public float distance = 10;
     public bool interacted = false;
     public float x= 0, y= 0;
+    private bool hideUIb = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,7 @@ public class interactableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < distance)
+        if (Vector3.Distance(transform.position, player.transform.position) < distance && hideUIb == false)
         {
             UIPrefab.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
@@ -38,5 +39,13 @@ public class interactableObject : MonoBehaviour
         {
             UIPrefab.SetActive(false);
         }
+    }
+
+
+    public void hideUI()
+    {
+        hideUIb = true;
+        UIPrefab.SetActive(false);
+
     }
 }

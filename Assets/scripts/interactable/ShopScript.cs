@@ -5,24 +5,44 @@ using UnityEngine;
 public class ShopScript : MonoBehaviour
 {
 
-    private GameObject player;
+    private interactableObject ib;
     public float distance = 10;
+    public GameObject panel;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectsWithTag("Player")[0];
-
+        ib = this.gameObject.GetComponent<interactableObject>();
+        // reset timer 
+        GameManager.time = 120;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, player.transform.position) < distance)
+        if (ib.interacted)
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Debug.Log("shop keeper");
-            }
+            panel.SetActive(true);
         }
+    }
+
+    public void ClosePanel()
+    {
+        panel.SetActive(false);
+    }
+
+    public void AddTime()
+    {
+
+    }
+
+    public void heal()
+    {
+
+    }
+
+    public void addSpeed()
+    {
+
     }
 }

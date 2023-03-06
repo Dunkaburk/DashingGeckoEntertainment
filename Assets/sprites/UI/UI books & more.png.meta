@@ -267,10 +267,10 @@ TextureImporter:
       name: UI books & more_7
       rect:
         serializedVersion: 2
-        x: 608
+        x: 656
         y: 400
-        width: 96
-        height: 64
+        width: 48
+        height: 63
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5102,7 +5102,7 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5123,7 +5123,7 @@ TextureImporter:
         width: 16
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5172,10 +5172,10 @@ TextureImporter:
       UI books & more_216: -755883947
       bronze_coin_white_outline: 995165446
       UI books & more_157: -51708612
-      UI books & more_167: 1273871735
+      UI books & more_65: -960822318
       UI books & more_154: -879753429
       UI books & more_93: 710605605
-      UI books & more_65: -960822318
+      UI books & more_167: 1273871735
       silver_coin_white_outline: -771002599
       UI books & more_5: -462743679
       UI books & more_54: 1682069925
@@ -5268,7 +5268,7 @@ TextureImporter:
       UI books & more_77: -1993477743
       UI books & more_203: 1756529922
       hour_glass: -263586239
-      UI books & more_217: -1326029968
+      UI books & more_145: 828670978
       UI books & more_149: 439804455
       silver_ingot_white_outline: 205454215
       UI books & more_89: 24578093
@@ -5277,7 +5277,7 @@ TextureImporter:
       UI books & more_75: 1754812627
       UI books & more_156: -1540007441
       UI books & more_179: -1067480243
-      UI books & more_145: 828670978
+      UI books & more_217: -1326029968
       UI books & more_224: 1676813161
       UI books & more_230: -1087685115
       UI books & more_10: 764417605
@@ -5296,13 +5296,13 @@ TextureImporter:
       UI books & more_199: -1506787042
       UI books & more_35: 1922633212
       UI books & more_104: 679269837
-      UI books & more_202: -725435169
+      UI books & more_81: -42793934
       UI books & more_235: 941149995
       UI books & more_126: -603580279
-      UI books & more_81: -42793934
       UI books & more_60: -495869178
       UI books & more_116: -2008804620
       UI books & more_215: 1909251201
+      UI books & more_202: -725435169
       UI books & more_36: -1429839034
       UI books & more_17: -1904145382
       UI books & more_198: -1764082484
