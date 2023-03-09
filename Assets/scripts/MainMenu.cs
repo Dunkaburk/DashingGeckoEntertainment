@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public GameObject SettingsPanel;
     public GameObject[] HowToPlayPanels;
+    public GameManager GameManager;
 
     // Update is called once per frame
     void Update()
@@ -23,6 +24,9 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Loading floor 1");
         SceneManager.LoadScene("ElevatorRoom");
+
+        GameManager.coins = 0;
+        GameManager.health = 100;
     }
 
     public void ExitGame()
