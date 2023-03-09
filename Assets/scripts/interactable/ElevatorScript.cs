@@ -25,9 +25,27 @@ public class ElevatorScript : MonoBehaviour
         if (ib.interacted)
         {
             tm.restartTime();
-            SceneManager.LoadScene("ShopScene");
-            GameManager.spawnPointx = 0;
-            GameManager.spawnPointy = 0;
+            if (SceneManager.GetActiveScene().name == "ShopScene")
+            {
+                if (GameManager.haveWon)
+                {
+                    SceneManager.LoadScene("VictoryScene");
+                }
+                else
+                {
+                    SceneManager.LoadScene("ElevatorRoom");
+                    GameManager.spawnPointx = 0;
+                    GameManager.spawnPointy = 0;
+                    GameManager.reset();
+                }
+            }
+            else
+            {
+                SceneManager.LoadScene("ShopScene");
+                GameManager.spawnPointx = 0;
+                GameManager.spawnPointy = 0;
+            }
+        
         }
     }
 }

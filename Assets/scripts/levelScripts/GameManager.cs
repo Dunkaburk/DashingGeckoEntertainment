@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public static List<string> clearedRooms = new List<string>();
     // Start is called before the first frame update
     public static bool alldeadEnemies = false;
+    public static bool haveWon = false;
+
+
     void Start()
     {
         checkIfAlreadyCleared();
@@ -55,6 +58,11 @@ public class GameManager : MonoBehaviour
                 Destroy(enemy);
             }
         }
+    }
+
+    public static void reset()
+    {
+        clearedRooms = new List<string>();
     }
 
 }

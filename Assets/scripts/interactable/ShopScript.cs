@@ -57,6 +57,10 @@ public class ShopScript : MonoBehaviour
         panel.SetActive(false);
         interakting = false;
         intercount = 0;
+        if (GameManager.haveWon)
+        {
+            speach[3].SetActive(true);
+        }
     }
 
     public void AddTime(int amount)
@@ -83,6 +87,7 @@ public class ShopScript : MonoBehaviour
         if (GameManager.coins >= amount)
         {
             GameManager.coins -= amount;
+            GameManager.haveWon = true;
         }
     }
 }
